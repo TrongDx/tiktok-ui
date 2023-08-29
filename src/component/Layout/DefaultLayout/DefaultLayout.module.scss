@@ -5,7 +5,7 @@
 }
 
 .container {
-    width: 1484px;
+    width: var(--default-layout-width);
     display: flex;
 }
 
