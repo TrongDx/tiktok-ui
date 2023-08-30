@@ -1,4 +1,7 @@
 .wrapper {
+    --threedots-height: 80px;
+    --span-top: 40px;
+
     display: flex;
     align-items: center;
     padding: 9px 16px;
@@ -6,6 +9,10 @@
 
     &:hover {
         background: rgba(22, 24, 35, 0.03);
+
+        .ellipsis {
+            visibility: visible; // Hiển thị nút ellipsis khi hover vào wrapper
+        }
     }
 }
 
@@ -31,4 +38,51 @@
 .usename {
     font-size: 1.4rem;
     color: rgba(22, 24, 35, 0.5);
+}
+
+.tippy-rounded {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
+}
+.threedots {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    a {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    background-color: #ffffff;
+
+    span {
+        content: '';
+        position: absolute;
+        width: 100%;
+        top: 40px;
+        background-color: rgba(22, 24, 35, 0.12);
+        height: 1px;
+    }
+}
+
+.threedots-icon {
+    padding: 8px;
+
+    .icon {
+        padding-right: 12px;
+    }
+    &:hover {
+        .icon,
+        a {
+            color: red;
+        }
+    }
+}
+
+.ellipsis {
+    visibility: hidden; // Ẩn nút ellipsis mặc định
+
+    &:hover {
+        cursor: pointer;
+    }
 }
