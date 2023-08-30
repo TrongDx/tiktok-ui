@@ -21,8 +21,6 @@
     justify-content: space-between;
 }
 
-.logo {
-}
 .search,
 .search-result {
     width: 500px;
@@ -93,5 +91,58 @@
 
     &:hover {
         cursor: pointer;
+    }
+}
+.action {
+    display: flex;
+    align-items: center;
+}
+.iconDesktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Đảm bảo kích thước bằng 48x48 */
+    width: 48px;
+    height: 48px;
+    background-color: var(--white);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.desktop {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 16px;
+    align-items: center;
+    max-width: 230px;
+
+    .img-desktop {
+        width: 116px;
+        height: 100px;
+    }
+
+    p:nth-child(2) {
+        color: rgb(22, 24, 35);
+        font-family: 'IBM Plex Sans', TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.093px;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+        margin-top: 8px;
+        padding-bottom: 12px;
+    }
+    p:nth-child(4) {
+        color: rgba(22, 24, 35, 0.5);
+        font-family: 'IBM Plex Sans', TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+        letter-spacing: 0.093px;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        margin-top: 12px;
+        cursor: pointer;
+        display: flex;
     }
 }
