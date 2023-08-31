@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner, faMagnifyingGlass, faPlus } from '@fortawesome/free-solid-svg-icons'; // Import the correct icon here
+import { faCircleXmark, faSpinner, faMagnifyingGlass, faPlus, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'; // Import the correct icon here
 import styles from './Header.module.scss'
 import images from '~/assets/images';
 import Tippy from '@tippyjs/react';
@@ -9,8 +9,32 @@ import { Wrapper as PopperWrapper } from '~/component/Popper';
 import AccountItem from '~/component/AccountItem';
 
 import Button from '~/component/Button';
+import Menu from '~/component/Popper/Menu';
 const cx = classNames.bind(styles)
 
+const MENU_ITEM = [
+    {
+        icon: <img src={images.liveItem} alt="/live" />,
+        title: 'Trung tâm Nhà sáng tạo LIVE',
+    },
+    {
+        icon: <img src={images.languagle} alt="/live" />,
+        title: 'Tiếng việt',
+    },
+    {
+        icon: <img src={images.feedback} alt="/live" />,
+        title: 'Phản hồi và trợ giúp',
+        to: '/feedback'
+    },
+    {
+        icon: <img src={images.keyboard} alt="/live" />,
+        title: 'Phím tắt trên bàn phím',
+    },
+    {
+        icon: <img src={images.lightDark} alt="/live" />,
+        title: 'Chế độ tối',
+    }
+]
 function Header() {
     const [searchResult, setSearchResult] = useState([])
     useEffect(() => {
@@ -61,6 +85,7 @@ function Header() {
                     Đăng nhập
                 </Button>
                 <Tippy
+                    delay={[0, 700]}
                     arrow={true}
                     theme={'light'}
                     interactive={true}
@@ -80,6 +105,13 @@ function Header() {
                         <img src={images.iconDesktop} alt="/Desktop" />
                     </button>
                 </Tippy>
+                <Menu
+                    items={MENU_ITEM}
+                >
+                    <button className={cx('more-btn')}>
+                        <FontAwesomeIcon icon={faEllipsisVertical} />
+                    </button>
+                </Menu>
             </div>
         </div>
     </header>

@@ -1,0 +1,27 @@
+.tippy-more-btn {
+    border-radius: 8px;
+    background-color: var(--white);
+}
+.menu-item {
+    background-color: var(--white);
+    display: flex;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.03px;
+    padding: 8px 0px;
+    margin: 0px;
+    min-width: 223px;
+
+    .icon {
+        display: inline-block;
+        width: 24px; /* Đặt chiều rộng mong muốn */
+        height: 24px; /* Đặt chiều cao mong muốn */
+        margin-right: 6px; /* Khoảng cách giữa biểu tượng và tiêu đề */
+    }
+
+    &:hover {
+        cursor: pointer;
+        background: rgba(22, 24, 35, 0.03);
+    }
+}

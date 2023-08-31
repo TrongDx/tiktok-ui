@@ -146,3 +146,15 @@
         display: flex;
     }
 }
+
+.more-btn {
+    font-size: 1.6rem;
+    margin-left: 16px;
+    cursor: pointer;
+    font-style: normal;
+    padding: 0 4px;
+    width: 28px;
+    height: 20px;
+    display: block;
+    background-color: var(--white);
+}
