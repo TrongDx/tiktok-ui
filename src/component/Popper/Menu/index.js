@@ -33,6 +33,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
     return (
         <Tippy className={cx('tippy-more-btn')}
             delay={[0, 700]}
+            offset={[16, 8]}
             arrow={true}
             theme={'light'}
             interactive={true}
@@ -47,6 +48,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
                     </PopperWrapper>
                 </div>
             }
+            onHide={() => setHistory((prev) => prev.slice(0, 1))}
         >
             {children}
         </Tippy>

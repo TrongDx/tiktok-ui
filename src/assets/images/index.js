@@ -7,7 +7,14 @@ const images = {
     feedback: require('~/assets/images/feedback.svg').default,
     languagle: require('~/assets/images/languagle.svg').default,
     lightDark: require('~/assets/images/lightDark.svg').default,
-    keyboard: require('~/assets/images/keyboard.svg').default
+    keyboard: require('~/assets/images/keyboard.svg').default,
+    message: require('~/assets/images/message.svg').default,
+    inbox: require('~/assets/images/inbox.svg').default,
+    coin: require('~/assets/images/coin.svg').default,
+    favourite: require('~/assets/images/favourite.svg').default,
+    profile: require('~/assets/images/profile.svg').default,
+    setting: require('~/assets/images/setting.svg').default,
+    logout: require('~/assets/images/logout.svg').default,
 }
 
 export default images

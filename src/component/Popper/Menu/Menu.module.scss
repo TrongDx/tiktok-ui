@@ -3,6 +3,7 @@
     background-color: var(--white);
 }
 .menu-item {
+    width: 100%;
     background-color: var(--white);
     display: flex;
     font-weight: 600;
@@ -18,6 +19,10 @@
         width: 24px; /* Đặt chiều rộng mong muốn */
         height: 24px; /* Đặt chiều cao mong muốn */
         margin-right: 6px; /* Khoảng cách giữa biểu tượng và tiêu đề */
+    }
+
+    &.separate {
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
     }
 
     &:hover {
