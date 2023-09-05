@@ -20,11 +20,24 @@ const MENU_ITEM = [
     {
         icon: <img src={images.languagle} alt="/live" />,
         title: 'Tiếng việt',
+        children: {
+            title: 'Ngôn ngữ',
+            data: [
+                {
+                    code: 'en',
+                    title: 'Tiếng Anh',
+                },
+                {
+                    code: 'vi',
+                    title: 'Tiếng Việt (Việt Nam)',
+                },
+            ],
+        },
     },
     {
         icon: <img src={images.feedback} alt="/live" />,
         title: 'Phản hồi và trợ giúp',
-        to: '/feedback'
+        to: '/feedback',
     },
     {
         icon: <img src={images.keyboard} alt="/live" />,
@@ -42,6 +55,10 @@ function Header() {
             setSearchResult([1, 2, 3])
         }, 0)
     }, [])
+
+    const handleMenuChange = (menuItem) => {
+        // console.log(menuItem);
+    }
 
     return <header className={cx('wrapper')}>
         <div className={cx('inner')}>
@@ -107,6 +124,7 @@ function Header() {
                 </Tippy>
                 <Menu
                     items={MENU_ITEM}
+                    onChange={handleMenuChange}
                 >
                     <button className={cx('more-btn')}>
                         <FontAwesomeIcon icon={faEllipsisVertical} />
