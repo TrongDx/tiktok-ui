@@ -6,6 +6,7 @@ import 'tippy.js/themes/light.css';
 import 'tippy.js/dist/tippy.css';
 import classNames from "classnames/bind";
 import styles from './AccountItem.module.scss'
+import Image from '../Image';
 
 const cx = classNames.bind(styles)
 
@@ -14,7 +15,7 @@ function AccountItem() {
     return (
 
         <div className={cx('wrapper')}>
-            <img className={cx('avatar')} src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/a13a343f85e50b6af1e1f80c95f0accf~c5_100x100.jpeg?x-expires=1694052000&x-signature=P0KmxLs4jM%2BfO6WsulSq729FG8A%3D" alt="/" />
+            <Image className={cx('avatar')} src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/a13a343f85e50b6af1e1f80c95f0accf~c5_100x100.jpeg?x-expires=1694052000&x-signature=P0KmxLs4jM%2BfO6WsulSq729FG8A%3D" alt="/" />
             <div className={cx('info')}>
                 <h4 className={cx('name')}>
                     <span>dthue_312</span>
