@@ -11,15 +11,17 @@ import AccountItem from '~/component/AccountItem';
 
 import Button from '~/component/Button';
 import Menu from '~/component/Popper/Menu';
+import Image from '~/component/Image';
+import { ArrowDownloadIcon, CoinIcon, FavouriteIcon, FeedbackIcon, InboxIcon, KeyboardIcon, LanguagleIcon, LightDarkIcon, LiveIcon, LogoIcon, LogoutIcon, MessageIcon, ProfileIcon, SettingIcon } from '~/component/Icons';
 const cx = classNames.bind(styles)
 
 const MENU_ITEM = [
     {
-        icon: <img src={images.liveItem} alt="/live" />,
+        icon: <LiveIcon />,
         title: 'Trung tâm Nhà sáng tạo LIVE',
     },
     {
-        icon: <img src={images.languagle} alt="/live" />,
+        icon: <LanguagleIcon />,
         title: 'Tiếng việt',
         children: {
             title: 'Ngôn ngữ',
@@ -36,16 +38,16 @@ const MENU_ITEM = [
         },
     },
     {
-        icon: <img src={images.feedback} alt="/live" />,
+        icon: <FeedbackIcon />,
         title: 'Phản hồi và trợ giúp',
         to: '/feedback',
     },
     {
-        icon: <img src={images.keyboard} alt="/live" />,
+        icon: <KeyboardIcon />,
         title: 'Phím tắt trên bàn phím',
     },
     {
-        icon: <img src={images.lightDark} alt="/live" />,
+        icon: <LightDarkIcon />,
         title: 'Chế độ tối',
     }
 ]
@@ -65,28 +67,28 @@ function Header() {
 
     const userMenu = [
         {
-            icon: <img src={images.profile} alt="/live" />,
+            icon: <ProfileIcon />,
             title: 'Xem hồ sơ',
             to: '/@trongdx023',
         },
         {
-            icon: <img src={images.favourite} alt="/live" />,
+            icon: <FavouriteIcon />,
             title: 'Yêu thích',
             to: '/@trongdx023',
         },
         {
-            icon: <img src={images.coin} alt="/live" />,
+            icon: <CoinIcon />,
             title: 'Nhận xu',
             to: '/coin',
         },
         {
-            icon: <img src={images.setting} alt="/live" />,
+            icon: <SettingIcon />,
             title: 'Cài đặt',
             to: '/setting',
         },
         ...MENU_ITEM,
         {
-            icon: <img src={images.logout} alt="/live" />,
+            icon: <LogoutIcon />,
             title: 'Đăng xuất',
             to: '/',
             separate: true
@@ -96,7 +98,7 @@ function Header() {
         <div className={cx('inner')}>
             <div className={cx('logo')}>
                 <a href="/">
-                    <img src={images.logo} alt="Tiktok" />
+                    <LogoIcon />
                 </a>
             </div>
             <Tippy
@@ -145,7 +147,7 @@ function Header() {
                                     <p>Ứng dụng Tiktok cho máy tính</p>
                                     <Button download>Tải về</Button>
                                     <p>Thay vào đó, tải ứng dụng di động về
-                                        <img src={images.arrowDownload} alt="/" />
+                                        <ArrowDownloadIcon />
                                     </p>
                                 </div>
                             }
@@ -160,7 +162,7 @@ function Header() {
                             delay={200}
                         >
                             <button className={cx('action-btn')}>
-                                <img className={cx('action-img-message')} src={images.message} alt="/message" />
+                                <MessageIcon />
                             </button>
                         </Tippy>
                         <Tippy
@@ -169,7 +171,7 @@ function Header() {
                             delay={200}
                         >
                             <button className={cx('action-btn')}>
-                                <img className={cx('action-img-inbox')} src={images.inbox} alt="/inbox" />
+                                <InboxIcon />
                             </button>
                         </Tippy>
                     </>
@@ -193,7 +195,7 @@ function Header() {
                                     <p>Ứng dụng Tiktok cho máy tính</p>
                                     <Button download>Tải về</Button>
                                     <p>Thay vào đó, tải ứng dụng di động về
-                                        <img src={images.arrowDownload} alt="/" />
+                                        <ArrowDownloadIcon />
                                     </p>
                                 </div>
                             }
@@ -209,9 +211,12 @@ function Header() {
                     onChange={handleMenuChange}
                 >
                     {currentUser ? (
-                        <img className={cx('user-avatar')}
+                        <Image
+                            className={cx('user-avatar')}
                             src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/082eb15b42a5ce1128c6e6437b0659da~c5_720x720.jpeg?x-expires=1694073600&x-signature=E2LKm%2F2%2BZuiSGgO4%2BnwVERCfAis%3D"
-                            alt="Đinh Xuân Trọng" />
+                            alt="Đinh Xuân Trọng"
+                            fallback='https://scontent.fhan14-1.fna.fbcdn.net/v/t1.6435-9/74242747_2441083699499683_9211280282282360832_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=174925&_nc_ohc=6bnjSlhLbTYAX8ulToq&_nc_ht=scontent.fhan14-1.fna&oh=00_AfB0p7AEJGVKcUMgjayTtKJIjddROvxtSl0G8Mz3C6oa1Q&oe=651FCBEE'
+                        />
                     ) : (
 
                         <button className={cx('more-btn')}>
