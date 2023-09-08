@@ -4,24 +4,25 @@ import { faCheckCircle, faEllipsis, faFlag, faHeartCrack } from '@fortawesome/fr
 import Tippy from '@tippyjs/react';
 import 'tippy.js/themes/light.css';
 import 'tippy.js/dist/tippy.css';
+import { Link } from 'react-router-dom';
 import classNames from "classnames/bind";
 import styles from './AccountItem.module.scss'
 import Image from '../Image';
 
 const cx = classNames.bind(styles)
 
-function AccountItem() {
+function AccountItem({ data }) {
     // const [isTippyVisible, setIsTippyVisible] = useState(false)
     return (
 
-        <div className={cx('wrapper')}>
-            <Image className={cx('avatar')} src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/a13a343f85e50b6af1e1f80c95f0accf~c5_100x100.jpeg?x-expires=1694052000&x-signature=P0KmxLs4jM%2BfO6WsulSq729FG8A%3D" alt="/" />
+        <Link to={`/@${data.nickname}`} className={cx('wrapper')}>
+            <Image className={cx('avatar')} src={data.avatar} alt={data.full_name} />
             <div className={cx('info')}>
                 <h4 className={cx('name')}>
-                    <span>dthue_312</span>
-                    <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
+                    <span>{data.full_name}</span>
+                    {data.tick && <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />}
                 </h4>
-                <span className={cx('usename')}>by Đ.Huệ</span>
+                <span className={cx('usename')}>{data.nickname}</span>
             </div>
             <Tippy
                 arrow={true}
@@ -48,7 +49,7 @@ function AccountItem() {
                     <FontAwesomeIcon icon={faEllipsis} />
                 </button>
             </Tippy>
-        </div>
+        </Link>
     );
 }
 
