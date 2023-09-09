@@ -2,6 +2,10 @@
     border-radius: 8px;
     background-color: var(--white);
 }
+.menu-body {
+    overflow-y: auto;
+}
+
 .menu-item {
     width: 100%;
     background-color: var(--white);
@@ -35,6 +39,8 @@
 .header {
     position: relative;
     height: 30px;
+    margin-top: -8px;
+    flex-shrink: 0;
 }
 .back-btn {
     width: 50px;

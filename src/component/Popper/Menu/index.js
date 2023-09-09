@@ -31,7 +31,8 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
     };
 
     return (
-        <Tippy className={cx('tippy-more-btn')}
+        <Tippy
+            className={cx('tippy-more-btn')}
             delay={[0, 700]}
             offset={[16, 8]}
             arrow={true}
@@ -45,7 +46,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
                         {history.length > 1 && <Header title='Ngôn ngữ' onBack={() => {
                             setHistory(prev => prev.slice(0, prev.length - 1))
                         }} />}
-                        {renderItem()}
+                        <div className={cx('menu-body')}>{renderItem()}</div>
                     </PopperWrapper>
                 </div>
             }

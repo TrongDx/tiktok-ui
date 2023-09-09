@@ -105,28 +105,30 @@ function Header() {
                         <Button upload onClick={() => { alert('Clicked!') }}>
                             <FontAwesomeIcon icon={faPlus} /><span>&nbsp;&nbsp;&nbsp;</span>Tải lên
                         </Button>
-                        <Tippy
-                            delay={[0, 700]}
-                            arrow={true}
-                            theme={'light'}
-                            interactive={true}
-                            hideOnClick={false}
-                            placement={'bottom'}
-                            content={
-                                <div className={cx('desktop')} tabIndex="-1" >
-                                    <img className={cx('img-desktop')} src={images.desktop} alt="/" />
-                                    <p>Ứng dụng Tiktok cho máy tính</p>
-                                    <Button download>Tải về</Button>
-                                    <p>Thay vào đó, tải ứng dụng di động về
-                                        <ArrowDownloadIcon />
-                                    </p>
-                                </div>
-                            }
-                        >
-                            <button className={cx('iconDesktop')} >
-                                <img src={images.iconDesktop} alt="/Desktop" />
-                            </button>
-                        </Tippy>
+                        <div> {/*Using a wrapper <div> or <span> tag around the reference element solves this by creating a new parentNode context. */}
+                            <Tippy
+                                delay={[0, 700]}
+                                arrow={true}
+                                theme={'light'}
+                                interactive={true}
+                                hideOnClick={false}
+                                placement={'bottom'}
+                                content={
+                                    <div className={cx('desktop')} tabIndex="-1" >
+                                        <img className={cx('img-desktop')} src={images.desktop} alt="/" />
+                                        <p>Ứng dụng Tiktok cho máy tính</p>
+                                        <Button download>Tải về</Button>
+                                        <p>Thay vào đó, tải ứng dụng di động về
+                                            <ArrowDownloadIcon />
+                                        </p>
+                                    </div>
+                                }
+                            >
+                                <button className={cx('iconDesktop')} >
+                                    <img src={images.iconDesktop} alt="/Desktop" />
+                                </button>
+                            </Tippy>
+                        </div>
                         <Tippy
                             content={'Tin nhắn'}
                             placement={'bottom'}
@@ -154,28 +156,31 @@ function Header() {
                         <Button primary onClick={() => { alert('Clicked!') }}>
                             Đăng nhập
                         </Button>
-                        <Tippy
-                            delay={[0, 700]}
-                            arrow={true}
-                            theme={'light'}
-                            interactive={true}
-                            hideOnClick={false}
-                            placement={'bottom'}
-                            content={
-                                <div className={cx('desktop')} tabIndex="-1" >
-                                    <img className={cx('img-desktop')} src={images.desktop} alt="/" />
-                                    <p>Ứng dụng Tiktok cho máy tính</p>
-                                    <Button download>Tải về</Button>
-                                    <p>Thay vào đó, tải ứng dụng di động về
-                                        <ArrowDownloadIcon />
-                                    </p>
-                                </div>
-                            }
-                        >
-                            <button className={cx('iconDesktop')}>
-                                <img src={images.iconDesktop} alt="/Desktop" />
-                            </button>
-                        </Tippy>
+                        <div> {/*Using a wrapper <div> or <span> tag around the reference element solves this by creating a new parentNode context. */}
+                            <Tippy
+                                delay={[0, 700]}
+                                arrow={true}
+                                theme={'light'}
+                                interactive={true}
+                                appendTo={() => document.body}
+                                hideOnClick={false}
+                                placement={'bottom'}
+                                content={
+                                    <div className={cx('desktop')} tabIndex="-1" >
+                                        <img className={cx('img-desktop')} src={images.desktop} alt="/" />
+                                        <p>Ứng dụng Tiktok cho máy tính</p>
+                                        <Button download>Tải về</Button>
+                                        <p>Thay vào đó, tải ứng dụng di động về
+                                            <ArrowDownloadIcon />
+                                        </p>
+                                    </div>
+                                }
+                            >
+                                <button className={cx('iconDesktop')}>
+                                    <img src={images.iconDesktop} alt="/Desktop" />
+                                </button>
+                            </Tippy>
+                        </div>
                     </>
                 )}
                 <Menu
