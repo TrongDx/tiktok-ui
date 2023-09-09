@@ -5,12 +5,14 @@ import styles from './Header.module.scss'
 import images from '~/assets/images';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import { Link } from 'react-router-dom';
 
 import Button from '~/component/Button';
 import Menu from '~/component/Popper/Menu';
 import Image from '~/component/Image';
 import { ArrowDownloadIcon, CoinIcon, FavouriteIcon, FeedbackIcon, InboxIcon, KeyboardIcon, LanguagleIcon, LightDarkIcon, LiveIcon, LogoIcon, LogoutIcon, MessageIcon, ProfileIcon, SettingIcon } from '~/component/Icons';
 import Search from '../Search';
+import routesConfig from '~/config/routes'
 const cx = classNames.bind(styles)
 
 const MENU_ITEM = [
@@ -90,9 +92,9 @@ function Header() {
     return <header className={cx('wrapper')}>
         <div className={cx('inner')}>
             <div className={cx('logo')}>
-                <a href="/">
+                <Link to={routesConfig.home} className={cx('logo-link')}>
                     <LogoIcon />
-                </a>
+                </Link>
             </div>
             {/*Search*/}
             <Search />
@@ -101,13 +103,14 @@ function Header() {
                 {currentUser ? (
                     <>
                         <Button upload onClick={() => { alert('Clicked!') }}>
-                            <FontAwesomeIcon icon={faPlus} />Tải lên
+                            <FontAwesomeIcon icon={faPlus} /><span>&nbsp;&nbsp;&nbsp;</span>Tải lên
                         </Button>
                         <Tippy
                             delay={[0, 700]}
                             arrow={true}
                             theme={'light'}
                             interactive={true}
+                            hideOnClick={false}
                             placement={'bottom'}
                             content={
                                 <div className={cx('desktop')} tabIndex="-1" >
@@ -146,7 +149,7 @@ function Header() {
                 ) : (
                     <>
                         <Button upload onClick={() => { alert('Clicked!') }}>
-                            <FontAwesomeIcon icon={faPlus} />Tải lên
+                            <FontAwesomeIcon icon={faPlus} /><span>&nbsp;&nbsp;&nbsp;</span>Tải lên
                         </Button>
                         <Button primary onClick={() => { alert('Clicked!') }}>
                             Đăng nhập
@@ -156,6 +159,7 @@ function Header() {
                             arrow={true}
                             theme={'light'}
                             interactive={true}
+                            hideOnClick={false}
                             placement={'bottom'}
                             content={
                                 <div className={cx('desktop')} tabIndex="-1" >
