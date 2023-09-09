@@ -12,7 +12,7 @@ import Menu from '~/component/Popper/Menu';
 import Image from '~/component/Image';
 import { ArrowDownloadIcon, CoinIcon, FavouriteIcon, FeedbackIcon, InboxIcon, KeyboardIcon, LanguagleIcon, LightDarkIcon, LiveIcon, LogoIcon, LogoutIcon, MessageIcon, ProfileIcon, SettingIcon } from '~/component/Icons';
 import Search from '../Search';
-import routesConfig from '~/config/routes'
+import config from '~/config'
 const cx = classNames.bind(styles)
 
 const MENU_ITEM = [
@@ -92,7 +92,7 @@ function Header() {
     return <header className={cx('wrapper')}>
         <div className={cx('inner')}>
             <div className={cx('logo')}>
-                <Link to={routesConfig.home} className={cx('logo-link')}>
+                <Link to={config.routes.home} className={cx('logo-link')}>
                     <LogoIcon />
                 </Link>
             </div>
