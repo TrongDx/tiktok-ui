@@ -35,6 +35,15 @@ function Button({ to, href, primary = false, outline = false, small = false, lar
 
 
 Button.propTypes = {
-    children: PropTypes.node
+    to: PropTypes.string,
+    href: PropTypes.string,
+    primary: PropTypes.bool,
+    outline: PropTypes.bool,
+    small: PropTypes.bool,
+    large: PropTypes.bool,
+    upload: PropTypes.bool,
+    download: PropTypes.bool,
+    children: PropTypes.node.isRequired,
+    onClick: PropTypes.func,
 }
 export default Button;
