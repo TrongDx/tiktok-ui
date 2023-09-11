@@ -1,4 +1,5 @@
 // import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faEllipsis, faFlag, faHeartCrack } from '@fortawesome/free-solid-svg-icons'
 import Tippy from '@tippyjs/react';
@@ -53,4 +54,7 @@ function AccountItem({ data }) {
     );
 }
 
+AccountItem.propTypes = {
+    data: PropTypes.object,
+}
 export default AccountItem;
