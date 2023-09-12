@@ -1,6 +1,8 @@
 .wrapper {
     font-size: 1.6rem;
     font-weight: 700;
+    justify-content: center; /* Canh giữa theo chiều ngang */
+    align-items: center;
     font-family: 'TikTokFont', sans-serif;
     min-width: 100px;
     height: 36px;
@@ -17,6 +19,7 @@
 }
 //button style
 .primary {
+    display: flex;
     color: var(--white);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
 

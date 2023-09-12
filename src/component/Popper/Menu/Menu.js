@@ -31,6 +31,10 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
         });
     };
 
+    const handleResetMenu = () => {
+        setHistory((prev) => prev.slice(0, 1))
+    }
+
     return (
         <Tippy
             className={cx('tippy-more-btn')}
@@ -51,7 +55,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
                     </PopperWrapper>
                 </div>
             }
-            onHide={() => setHistory((prev) => prev.slice(0, 1))}
+            onHide={handleResetMenu}
         >
             {children}
         </Tippy>
