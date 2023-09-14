@@ -10,14 +10,14 @@ import { Link } from 'react-router-dom';
 import Button from '~/component/Button/Button';
 import Menu from '~/component/Popper/Menu/Menu';
 import Image from '~/component/Image/Image';
-import { ArrowDownloadIcon, CoinIcon, FavouriteIcon, FeedbackIcon, InboxIcon, KeyboardIcon, LanguagleIcon, LightDarkIcon, LiveIcon, LogoIcon, LogoutIcon, MessageIcon, ProfileIcon, SettingIcon } from '~/component/Icons/Icons';
+import { ArrowDownloadIcon, CoinIcon, FavouriteIcon, FeedbackIcon, InboxIcon, KeyboardIcon, LanguagleIcon, LightDarkIcon, LiveHomeIcon, LogoIcon, LogoutIcon, MessageIcon, ProfileIcon, SettingIcon } from '~/component/Icons/Icons';
 import Search from '../Search/Search';
 import config from '~/config'
 const cx = classNames.bind(styles)
 
 const MENU_ITEM = [
     {
-        icon: <LiveIcon />,
+        icon: <LiveHomeIcon />,
         title: 'Trung tâm Nhà sáng tạo LIVE',
     },
     {

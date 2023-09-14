@@ -1,9 +1,11 @@
 const routes = {
     home: '/',
-    profile: '/following',
-    following: '/:nickname',
+    profile: '/:nickname',
+    following: '/following',
     upload: '/upload',
     search: '/search',
+    live: '/live',
+    discovery: '/discovery' //khám phá
 }
 
 export default routes
