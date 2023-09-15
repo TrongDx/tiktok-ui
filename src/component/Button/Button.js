@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styles from './Button.module.scss'
 
 const cx = classNames.bind(styles)
-function Button({ to, href, primary = false, outline = false, small = false, large = false, upload = false, download = false, children, onClick, ...passProps }) {
+function Button({ className, to, href, primary = false, outline = false, small = false, large = false, upload = false, download = false, children, onClick, ...passProps }) {
     let Comp = 'button';
     let props = {
         onClick,
@@ -19,6 +19,7 @@ function Button({ to, href, primary = false, outline = false, small = false, lar
         Comp = 'a'
     }
     const classes = cx('wrapper', {
+        [className]: className,
         primary,
         outline,
         small,
@@ -35,6 +36,7 @@ function Button({ to, href, primary = false, outline = false, small = false, lar
 
 
 Button.propTypes = {
+    classNames: PropTypes.string,
     to: PropTypes.string,
     href: PropTypes.string,
     primary: PropTypes.bool,
