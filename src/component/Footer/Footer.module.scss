@@ -1,0 +1,86 @@
+.wrapper {
+    width: 216px;
+    height: 260px;
+    position: relative;
+    padding-left: 8px;
+    padding-top: 16px;
+}
+
+.ContainerFirst {
+    width: 216px;
+    height: 46px;
+    margin-bottom: 8px;
+}
+
+.ContainerSecond {
+    width: 216px;
+    height: 68px;
+    margin-bottom: 8px;
+}
+
+.ContainerThird {
+    width: 223px;
+    height: 68px;
+    margin-bottom: 8px;
+}
+
+.ContainerAdd {
+    width: 216px;
+    height: 23px;
+    position: relative;
+    margin-bottom: 8px;
+
+    .SpanMoreText {
+        color: #16182380;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        display: inline-block;
+        margin-right: 6px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+}
+
+.tippy-wrapper {
+    width: 200px;
+    height: 98px;
+    background-color: #ffffff;
+    left: -2px;
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px;
+    transform: translateY(5px);
+
+    .arrow-tippy {
+        color: red;
+    }
+}
+
+.tippy-popup {
+    padding: 15px 16px 20px;
+    width: fit-content;
+    max-width: 200px;
+    padding-bottom: 20px;
+}
+
+.tippy-a-link {
+    color: #161823;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    display: block;
+}
+
+.copyright {
+    //
+    width: 90px;
+    height: 16px;
+    margin-right: 6px;
+    margin-top: 5px;
+    color: #16182380;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    display: inline-block;
+}

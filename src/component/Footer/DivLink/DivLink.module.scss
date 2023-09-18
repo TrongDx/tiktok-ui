@@ -1,0 +1,12 @@
+.title {
+    color: #16182380;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    display: inline-block;
+    margin-right: 6px;
+    margin-top: 5px;
+    &:hover {
+        text-decoration: underline;
+    }
+}

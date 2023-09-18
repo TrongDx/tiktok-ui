@@ -4,6 +4,7 @@ import Menu, { MenuItem } from './Menu'
 import SuggestedAccount from '~/component/SuggestedAccount';
 import config from '~/config';
 import { HomeIcon, UserGroupIcon, DiscoveryIcon, LiveIcon, HomeActiveIcon, DiscoveryActiveIcon, LiveActiveIcon, UserGroupActiveIcon } from '~/component/Icons'
+import Footer from '~/component/Footer';
 
 const cx = classNames.bind(styles)
 
@@ -17,6 +18,8 @@ function Sidebar() {
         </Menu>
         <SuggestedAccount label="Đề xuất" />
         <SuggestedAccount label="Các tài khoản đang follow" />
+
+        <Footer />
     </aside>
 }
 

@@ -15,6 +15,7 @@ const images = {
     profile: require('~/assets/images/profile.svg').default,
     setting: require('~/assets/images/setting.svg').default,
     logout: require('~/assets/images/logout.svg').default,
+    arrowTippy: require('~/assets/images/arrow-tippy.svg'),
 
     noImage: require('~/assets/images/no-image.png'),
 }
