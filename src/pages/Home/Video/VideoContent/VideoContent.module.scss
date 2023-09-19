@@ -1,0 +1,50 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.video {
+    width: 322px;
+    height: 576px;
+    margin-left: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.btn-action {
+    width: 48px;
+    height: 80px;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.cover-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #1618230f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 6px;
+
+    .icon {
+        height: 21px;
+        width: 19px;
+    }
+}
+
+.count-action {
+    color: #161823bf;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+}

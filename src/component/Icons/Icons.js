@@ -118,3 +118,9 @@ export const LiveIcon = ({ width = '3.2rem', height = '3.2rem', className }) => 
 export const ArrowTippy = ({ width = '1em', height = '1em', className }) => (
     <svg className={className} xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="#fff" verticalPropKey="bottom" ></svg>
 );
+
+export const MusicIcon = ({ width = '1.4rem', height = '1.4rem', className }) => (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="rgba(22, 24, 35, 1)">
+        <use xlinkHref="#Music_Note-8c658968"></use>
+    </svg>
+);
