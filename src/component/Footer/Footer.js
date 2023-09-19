@@ -3,7 +3,7 @@ import Tippy from "@tippyjs/react/headless";
 
 import styles from './Footer.module.scss'
 import DivLink from "./DivLink";
-import { ArrowTippy } from "../Icons";
+// import { ArrowTippy } from "../Icons";
 
 
 const cx = classNames.bind(styles)
@@ -44,8 +44,8 @@ function Footer() {
             </div>
             <span>
                 <Tippy
-                    interactive={false}
-                    delay={[0, 800]}
+                    interactive
+                    delay={[0, 0]}
                     placement='top-start'
                     render={renderTippy}
                 >
