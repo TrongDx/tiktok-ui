@@ -11,7 +11,14 @@ function Home() {
     const [videos, setVideos] = useState([])
     useEffect(() => {
         db.collection("videos").get().then((querySnapshot) => {
-            setVideos(querySnapshot.docs.map(doc => doc.data()))
+            // setVideos(querySnapshot.docs.map(doc => doc.data()))
+            const videoData = querySnapshot.docs.map((doc) => {
+                return {
+                    id: doc.id, // Sử dụng ID tự động của Firestore làm giá trị "key"
+                    ...doc.data(), // Lấy dữ liệu của tài liệu
+                };
+            });
+            setVideos(videoData);
         })
     }, []);
     return (
@@ -19,7 +26,7 @@ function Home() {
             id={cx('focus')}
             tabIndex={"1"}
             className={cx('wrapper')}>
-            {videos.map(video => <Video key={'1'} data={video} />)}
+            {videos.map((video) => <Video key={video.id} data={video} />)}
         </div>
     )
 }

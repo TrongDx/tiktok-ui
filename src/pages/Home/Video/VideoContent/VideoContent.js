@@ -1,8 +1,10 @@
-import classNames from "classnames/bind";
-import styles from './VideoContent.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark, faComment, faHeart, faShare } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useState } from "react";
+import classNames from "classnames/bind";
+import PropTypes from 'prop-types';
+
+import styles from './VideoContent.module.scss'
 
 const cx = classNames.bind(styles)
 
@@ -23,7 +25,10 @@ function VideoContent({ video, like, comment, share, save }) {
             <video
                 ref={videoRef}
                 onClick={handleVideo}
-                className={cx('video')} src={require('../../../../assets/videos/' + video)} loop />
+                className={cx('video')} src={require('../../../../assets/videos/' + video)}
+                loop
+            // autoPlay
+            />
             <div className={cx('action')}>
                 <div className={cx('btn-action')}>
                     <span className={cx('cover-icon')}><FontAwesomeIcon className={cx('icon')} icon={faHeart} /></span>
@@ -47,6 +52,13 @@ function VideoContent({ video, like, comment, share, save }) {
     );
 }
 
+VideoContent.propTypes = {
+    video: PropTypes.string.isRequired,
+    like: PropTypes.number.isRequired,
+    comment: PropTypes.number.isRequired,
+    share: PropTypes.number.isRequired,
+    save: PropTypes.number.isRequired,
+}
 export default VideoContent;
 
 
