@@ -26,7 +26,7 @@ function Home() {
             id={cx('focus')}
             tabIndex={"1"}
             className={cx('wrapper')}>
-            {videos.map((video) => <Video key={video.id} data={video} />)}
+            {videos.map((video) => <Video key={video.id} data={video} initialLike={video.like} />)}
         </div>
     )
 }

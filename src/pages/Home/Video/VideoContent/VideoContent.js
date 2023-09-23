@@ -5,10 +5,11 @@ import classNames from "classnames/bind";
 import PropTypes from 'prop-types';
 
 import styles from './VideoContent.module.scss'
+import { db } from '~/component/firebase/firebase'
 
 const cx = classNames.bind(styles)
 
-function VideoContent({ video, like, comment, share, save }) {
+function VideoContent({ id, video, like, comment, share, save }) {
     const videoRef = useRef()
     const [playing, setPlaying] = useState(false)
     const handleVideo = () => {
@@ -20,6 +21,21 @@ function VideoContent({ video, like, comment, share, save }) {
             setPlaying(true)
         }
     }
+
+    const [localLike, setLocalLike] = useState(like)
+    const handleLike = () => {
+        const newLike = localLike + 1
+        setLocalLike(newLike)
+
+        // Cập nhật giá trị like lên Firebase
+        db.collection("videos").doc(id).update({ like: newLike })
+            .then(() => {
+                console.log("Giá trị like đã được cập nhật lên Firebase.");
+            })
+            .catch((error) => {
+                console.error("Lỗi khi cập nhật giá trị like:", error);
+            });
+    }
     return (
         <div className={cx('wrapper')}>
             <video
@@ -30,9 +46,9 @@ function VideoContent({ video, like, comment, share, save }) {
             // autoPlay
             />
             <div className={cx('action')}>
-                <div className={cx('btn-action')}>
+                <div className={cx('btn-action')} onClick={handleLike}>
                     <span className={cx('cover-icon')}><FontAwesomeIcon className={cx('icon')} icon={faHeart} /></span>
-                    <strong className={cx('count-action')}>{like}</strong>
+                    <strong className={cx('count-action')}>{localLike}</strong>
                 </div>
                 <div className={cx('btn-action')}>
                     <span className={cx('cover-icon')}><FontAwesomeIcon className={cx('icon')} icon={faComment} /></span>
