@@ -190,7 +190,7 @@ function Header() {
                     {currentUser ? (
                         <Image
                             className={cx('user-avatar')}
-                            src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/082eb15b42a5ce1128c6e6437b0659da~c5_720x720.jpeg?x-expires=1694073600&x-signature=E2LKm%2F2%2BZuiSGgO4%2BnwVERCfAis%3D"
+                            src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/378531423_3577312669210108_2298627530140579798_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=668d3b&_nc_ohc=jLLKe7NTGNkAX9DEu46&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfAz_OTzj4RPpya0HLQ0xYh_c2qvmTuWU9Cozdaj5CohCw&oe=651C24CB"
                             alt="Đinh Xuân Trọng"
                             fallback='https://scontent.fhan14-1.fna.fbcdn.net/v/t1.6435-9/74242747_2441083699499683_9211280282282360832_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=174925&_nc_ohc=6bnjSlhLbTYAX8ulToq&_nc_ht=scontent.fhan14-1.fna&oh=00_AfB0p7AEJGVKcUMgjayTtKJIjddROvxtSl0G8Mz3C6oa1Q&oe=651FCBEE'
                         />
